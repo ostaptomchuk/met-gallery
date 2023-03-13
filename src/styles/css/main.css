@@ -1,0 +1,481 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  padding: 30px 0 0 0;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 120px;
+}
+
+.header-holder {
+  background-color: rgba(240, 248, 255, 0.276);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.nav-link {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #C70E22;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100vw;
+    top: 100px;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(27, 29, 30, 0.921);
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+}
+.header-logo-holder {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 20px;
+  color: #C70E22;
+}
+a:hover {
+  color: #fff;
+}
+
+.main-title {
+  font-family: "Rubik";
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #C70E22;
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-size: 72px;
+  }
+}
+
+.pseudo-title {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #000;
+}
+@media screen and (min-width: 768px) {
+  .pseudo-title {
+    font-size: 28px;
+  }
+}
+
+.wrapper {
+  height: 900px;
+  padding: 40px;
+}
+
+.heading-holder {
+  padding: 100px 0 0;
+  max-width: 570px;
+}
+@media screen and (min-width: 768px) {
+  .heading-holder {
+    padding: 0;
+  }
+}
+
+.explore {
+  background-color: rgb(51, 51, 51);
+  padding: 30px;
+}
+
+.explore-heading {
+  margin-bottom: 30px;
+}
+
+.explore-title {
+  font-family: "Rubik";
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #C70E22;
+  line-height: 1em;
+}
+
+.explore-grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .explore-grid-container {
+    -ms-grid-columns: 0.5fr 15px 3.5fr;
+    grid-template-columns: 0.5fr 3.5fr;
+    gap: 15px;
+  }
+}
+
+.filters-wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 20px 10px;
+  background-color: #F2F2F2;
+}
+
+.filters {
+  position: sticky;
+  top: 10px;
+}
+
+.museum-items {
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: #C70E22;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .museum-items {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.btn {
+  margin: 5px;
+  width: 40px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F2F2F2;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+.museum-item {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+
+.item-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.item-title {
+  font-family: "Rubik";
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.item-text {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 20px;
+  color: #C70E22;
+  margin-bottom: 10px;
+}
+.item-text b {
+  font-size: 18px;
+  color: #000;
+}
+
+.pages {
+  margin: 10px;
+}
+
+#footer {
+  background-color: #FFF;
+}
+
+iframe {
+  max-width: 450px;
+  width: 100%;
+}
+
+.footer-holder {
+  display: block;
+  padding: 50px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .footer-holder {
+    padding: 80px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer-holder {
+    padding: 80px 0px;
+  }
+}
+
+.footer-logo-holder img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.footer-logo-holder span {
+  font-family: "Poppins";
+  font-weight: 400;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 20px;
+  color: darkgray;
+}
+
+.footer-title {
+  font-family: "Poppins";
+  font-weight: 400;
+  display: block;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+}
+/*# sourceMappingURL=main.css.map */

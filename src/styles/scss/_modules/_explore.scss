@@ -1,0 +1,100 @@
+.explore {
+    background-color: rgb(51, 51, 51);
+    padding: 30px;
+}
+
+.explore-heading {
+    margin-bottom: 30px;
+}
+
+.explore-title {
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #C70E22;
+    line-height: 1em;
+}
+
+.explore-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    @media screen and (min-width:1024px) {
+        grid-template-columns: 0.5fr 3.5fr;
+        gap: 15px;
+    }
+
+}
+
+.filters-wrapper {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px 10px;
+    background-color: #F2F2F2;
+}
+
+.filters {
+    position: sticky;
+    top: 10px;
+}
+
+.museum-items {
+    border-radius: 20px;
+    padding: 20px 15px;
+    background-color: #C70E22;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.btn {
+    margin: 5px;
+    width: 40px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+.museum-item {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f2f2f2;
+}
+
+.item-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.item-title {
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.item-text {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    color: #C70E22;
+    margin-bottom: 10px;
+
+    b {
+        font-size: 18px;
+        color: #000;
+    }
+}
+
+.pages {
+    margin: 10px;
+}

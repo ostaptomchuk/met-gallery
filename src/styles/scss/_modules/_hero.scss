@@ -1,0 +1,35 @@
+.main-title {
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #C70E22;
+    // line-height: 1em;
+    @media screen and (min-width:768px) {
+        font-size: 72px;
+    }
+} 
+
+.pseudo-title {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #000;
+    @media screen and (min-width:768px) {
+        font-size: 28px;
+    }
+}
+
+.wrapper {
+    height: 900px;
+    padding: 40px;
+}
+
+.heading-holder {
+    padding: 100px 0 0;
+    @media screen and (min-width:768px) {
+        padding: 0;
+    }
+    max-width: 570px;
+}
